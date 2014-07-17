@@ -47,3 +47,13 @@ template "/etc/yum.repos.d/nginx.repo" do
   group "root"
   mode  "0644"
 end
+
+#
+# mongodbの最新版を取得するためのレポジトリを追加
+#
+template "/etc/yum.repos.d/mongodb.repo" do
+  source 'mongodb.repo'
+  owner "root"
+  group "root"
+  mode  "0644"
+end
